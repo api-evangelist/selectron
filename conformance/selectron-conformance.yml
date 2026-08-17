@@ -1,0 +1,86 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.selectron.ch/en/company/
+docs:
+- https://www.selectron.ch/en/company/
+- https://www.selectron.ch/en/services-and-support/cybersecurity-services/
+- https://www.selectron.ch/en/media/press-releases/three-wire-train-bus-wtb-gateways-certified-uic556-for-reliable-interoperability/
+note: >-
+  Selectron publishes no web API, so none of the usual API/web conformance families
+  (OAuth 2.0, OIDC, RFC 9457 problem details, JSON:API, OData, SCIM, FAPI) apply — they
+  are recorded here as not-applicable rather than as failures. What Selectron DOES
+  publish is a substantial rail functional-safety, quality and industrial-cybersecurity
+  certification posture plus train-communication-network interoperability conformance,
+  quoted from its own pages below. Standards marked conforms:true are Selectron's own
+  published claims about its products and development processes, not an API Evangelist
+  assessment.
+standards:
+- id: iso-ts-22163-iris
+  name: ISO/TS 22163 (IRIS Certification — railway quality management)
+  conforms: true
+  evidence: 'Company page names "ISO/TS 22163" / IRIS certification of the business management system'
+  source: https://www.selectron.ch/en/company/
+- id: en-61508-sil3
+  name: EN/IEC 61508 SIL 3 (functional safety of E/E/PE systems)
+  conforms: true
+  evidence: 'Company page: "EN 61508 SIL 3"'
+  source: https://www.selectron.ch/en/company/
+- id: en-50129-sil2
+  name: EN 50129 SIL 2 (railway safety-related electronic systems for signalling)
+  conforms: true
+  evidence: 'Company page: "EN 50129 SIL 2"'
+  source: https://www.selectron.ch/en/company/
+- id: en-50128-sil2
+  name: EN 50128 SIL 2 (railway software for control and protection systems)
+  conforms: true
+  evidence: 'Company page: "EN 50128 SIL 2"'
+  source: https://www.selectron.ch/en/company/
+- id: iec-62443-sl2
+  name: IEC 62443 SL 2 (industrial automation and control system security)
+  conforms: true
+  evidence: 'Company page: "IEC 62443 SL 2"; Cybersecurity Services page also markets "IEC 62443-certified training courses"'
+  source: https://www.selectron.ch/en/company/
+- id: tuv-assessed
+  name: TÜV assessment of development processes
+  conforms: true
+  evidence: 'Company page states the development processes are certified/assessed by TÜV'
+  source: https://www.selectron.ch/en/company/
+- id: iec-61375-tcn
+  name: IEC 61375 (Train Communication Network — MVB / WTB / ECN)
+  conforms: true
+  evidence: >-
+    Press release on three-wire train bus (WTB) gateways cites the IEC 61375 standard
+    and UIC guidelines as the basis for operational interoperability
+  source: https://www.selectron.ch/en/media/press-releases/three-wire-train-bus-wtb-gateways-certified-uic556-for-reliable-interoperability/
+- id: uic-556
+  name: UIC 556 (information transmission in the train bus)
+  conforms: true
+  evidence: 'Press release title and body: WTB gateways "certified UIC556 for reliable interoperability"'
+  source: https://www.selectron.ch/en/media/press-releases/three-wire-train-bus-wtb-gateways-certified-uic556-for-reliable-interoperability/
+- id: eu-cyber-resilience-act
+  name: EU Cyber Resilience Act (Regulation 2024/2847)
+  conforms: partial
+  evidence: >-
+    Selectron publishes a dedicated CRA service page and sells CRA readiness consulting;
+    this is a stated regulatory-preparedness posture and a service offering, not a
+    certification of conformity
+  source: https://www.selectron.ch/en/services-and-support/cybersecurity-services/cra-cyber-resiliance-act/
+not_applicable:
+- id: oauth2
+  reason: no public web API or authorization server (all /.well-known/* probes 404)
+- id: oidc
+  reason: no public web API; /.well-known/openid-configuration 404 on every host
+- id: rfc9457-problem-details
+  reason: no public web API and no OpenAPI to inspect
+- id: json-api
+  reason: no public web API
+- id: odata
+  reason: no public web API
+- id: scim
+  reason: no public web API
+- id: fapi
+  reason: not a financial-services provider and no OAuth surface
+- id: rfc9116-security-txt
+  reason: >-
+    probed and absent (404 on both hosts) — recorded as an absence in
+    well-known/selectron-well-known.yml, not as an N/A

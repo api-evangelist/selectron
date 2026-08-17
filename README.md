@@ -42,6 +42,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Selectron is a company surfaced as a portfolio company of serena and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting the enrichment pipeline.
+Selectron Systems AG is a Swiss rail-vehicle automation and safety supplier, founded in 1956 in Lyss, Switzerland, and part of the Knorr-Bremse Group since 2015. Its core business is the Train Control and Management System (TCMS): safety-certified programmable controllers and vehicle control units, Smartio remote I/O, driver-cab displays, Ethernet and train-bus networking, and a rail cybersecurity line (Security Gateway, Threat Detection Solution, PKI and Cyber Resilience Act services).
 
-Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.selectron.ch/de/index.php
+**No public API.** Selectron publishes no web API, developer portal or machine-readable contract. Its software surface is embedded/on-vehicle (IEC 61375 train bus) and its Symphony Suite engineering toolchain is distributed as licensed Windows applications through the login-gated Cockpit portal. Every spec and `/.well-known/` path probed on 2026-08-17 returned 404 — see `well-known/selectron-well-known.yml` for the full probe record and `x-coverage` in `apis.yml` for the coverage disclosure.
+
+What this profile does hold: a published rail safety/quality/OT-security certification posture (`conformance/`), a product-security reporting contact (`security/`), a domain-security probe (`security/`), an honest zero on pricing (`plans/`), and a generated `llms.txt` map of the public surface (`llms/`).
+
+Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.selectron.ch/en/

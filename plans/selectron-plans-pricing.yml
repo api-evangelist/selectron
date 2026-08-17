@@ -1,0 +1,26 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.selectron.ch/en/services-and-support/contact-sales-and-support/
+plan_count: 0
+currency: null
+plans: []
+note: >-
+  Selectron publishes no pricing, plans, tiers or rate card of any kind. It is a
+  business-to-business rail-vehicle automation supplier selling hardware (controllers,
+  remote I/O, HMIs, switches, routers, gateways, relays), engineering services and
+  licensed desktop tooling into OEM and operator programmes; every commercial route
+  runs through sales contact and, for the Symphony Suite toolchain, a per-customer
+  software license number redeemed on the Cockpit portal. There is no self-serve
+  signup, no metered API and therefore nothing to price publicly.
+evidence:
+- url: https://www.selectron.ch/en/services-and-support/contact-sales-and-support/
+  status: 200
+  finding: sales-and-support contact routing only, no prices
+- url: https://www.selectron.ch/en/services-and-support/contact-sales-and-support/cockpit-download-symphony-suite/
+  status: 200
+  finding: >-
+    software access requires "your existing license number for the software packages"
+    or purchasing one for major updates/upgrades — license is quoted, never listed
+- url: https://www.selectron.ch/sitemap.xml
+  status: 200
+  finding: 163 URLs, no pricing, plans, packages or store page in the sitemap

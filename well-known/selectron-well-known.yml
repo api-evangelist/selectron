@@ -1,0 +1,88 @@
+generated: '2026-08-17'
+method: probed
+source: live GET probes of /.well-known/* on every Selectron host named in apis.yml
+note: >-
+  Every /.well-known/ path probed returned 404 on both Selectron hosts, so NO WellKnown
+  and NO SecurityTxt pointer is emitted in apis.yml — this file records a verified
+  absence, not a presence. On www.selectron.ch the 404 responses for JSON paths are
+  served as the Angular site shell (content-type text/html, ~113KB), which is a
+  single-page-app catch-all and not a document; /.well-known/security.txt and
+  /llms.txt return a true 404 with content-length 0. Selectron does publish a product
+  security reporting address on its cybersecurity services page — captured in
+  security/selectron-vulnerability-disclosure.yml — but does not expose it via RFC 9116.
+hosts:
+- host: https://www.selectron.ch
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    note: content-length 0, no body
+  - path: /.well-known/openid-configuration
+    status: 404
+    note: HTML site shell
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    note: HTML site shell
+  - path: /.well-known/api-catalog
+    status: 404
+    note: HTML site shell
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    note: HTML site shell
+  - path: /.well-known/agent-card.json
+    status: 404
+    note: HTML site shell
+  - path: /.well-known/agent.json
+    status: 404
+    note: HTML site shell
+- host: https://cockpit.selectron.ch
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+x-contract-discovery:
+  checked: '2026-08-17'
+  result: no-published-contract
+  probes:
+  - url: https://www.selectron.ch/openapi.json
+    status: 404
+  - url: https://www.selectron.ch/openapi.yaml
+    status: 200
+    note: >-
+      NOT a spec. 2,545-byte Radware Cloud WAF interstitial titled "Unauthorized
+      Request Blocked" (content-type text/html). Recorded so a later run does not
+      mistake the 200 for a hit.
+  - url: https://www.selectron.ch/swagger.json
+    status: 404
+  - url: https://www.selectron.ch/v1/openapi.json
+    status: 404
+  - url: https://www.selectron.ch/api-docs
+    status: 404
+  - url: https://www.selectron.ch/docs
+    status: 404
+  - url: https://www.selectron.ch/redoc
+    status: 404
+  - url: https://www.selectron.ch/api
+    status: 404
+  - url: https://www.selectron.ch/graphql
+    status: 404
+  - url: https://www.selectron.ch/apis.json
+    status: 404
+  - url: https://www.selectron.ch/llms.txt
+    status: 404
+  - url: https://cockpit.selectron.ch/openapi.json
+    status: 404
+  hosts_that_do_not_resolve:
+  - api.selectron.ch
+  - developer.selectron.ch
+  - docs.selectron.ch
+  - status.selectron.ch
+  - trust.selectron.ch
+  - service.selectron.ch
+  note: >-
+    No REST OpenAPI, GraphQL endpoint, MCP server or A2A agent card was found on any
+    Selectron host. Selectron's software surface is embedded/on-vehicle (IEC 61375
+    train-bus, TRDP/MVB/WTB) and its engineering tooling (Symphony Suite) is a
+    Windows desktop toolchain distributed through the login-gated Cockpit portal
+    (registration requires a company email address and a license number, activated
+    manually within 24 hours). There is no web API to describe.
