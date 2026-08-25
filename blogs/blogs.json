@@ -1,0 +1,14 @@
+{
+  "repo": "selectron",
+  "feeds": [
+    {
+      "source": "https://cockpit.selectron.ch/de/Account/Login?ReturnUrl=%2Fen%2FDownload",
+      "feed_url": "https://cockpit.selectron.ch/de/Account/Login?ReturnUrl=%2Fen%2FDownload",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-22T20:20:02Z"
+}
