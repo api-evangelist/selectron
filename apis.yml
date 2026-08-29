@@ -13,6 +13,17 @@ description: 'Selectron Systems AG is a Swiss rail-vehicle automation and safety
   SIL 3, EN 50129 SIL 2, EN 50128 SIL 2 and IEC 62443 SL 2. Selectron publishes no
   public web API, developer portal or machine-readable contract.'
 url: https://raw.githubusercontent.com/api-evangelist/selectron/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.selectron.ch/media/0000-selectron/0000-selectron-logos/navigationheader-selectronlogo.png
 x-type: company
 x-source: serena-portfolio
